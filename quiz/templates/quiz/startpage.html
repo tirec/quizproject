@@ -14,7 +14,9 @@
 			<div class="jumbo">
 				<h1>Du tror att du vet bäst, kan allt och att kunden alltid har fel. Men är du ödmjuk någonstans därinne?</h1>
 				{% for quiz in quizzes %}
-					<p>{{ quiz.name }}</p>
+				    <p><a href="{% url "quiz_page" quiz.quiz_number %}">
+        			{{ quiz.name }}
+    				</a></p>
 				{% endfor %}
 				<a href="quiz.html" type="button" class="btn btn-danger btn-lg">Eh. Va?</a>
 			</div>
