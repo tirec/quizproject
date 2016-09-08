@@ -1,57 +1,149 @@
 body { 
-	background: black;
+	background: pink;
 	font-family: 'Playfair Display', serif;
 }
 
 body.quiz { 
-	background-color: #5bc0de;
+	background: linear-gradient(to bottom right, #9BF0FA, #FAE89B);
+	height:100vh; 
+	text-align: center;
+}
+
+body.landingquiz { 
+	background: linear-gradient(to bottom right, #9BF0FA, #FAE89B);
+	height:100vh; 
+	text-align: center;
+	padding-top: 10%;
+}
+
+body.completed { 
+	background: linear-gradient(to bottom right, #9BF0FA, #FAE89B);
+	height:100vh; 
+	text-align: center;
+	padding-top: 10%;
 }
 
 a {
-    color: white;
+    color: #F5F5EB;
+	font-family: 'Droid Sans Mono', monospace;
 }
 
 a:hover {
-    color: blue;
+    color: white;
 }
 
-.jumbo {
-	padding-top: 60px;
-    padding-bottom: 60px;
+p {
 	color: white;
+}
+
+.completed .btn-danger{
+	background-color: black;
+	margin-top: 40px;
+}
+
+.landingquiz .btn-danger{
+	background-color: black;
+	margin-top: 40px;
+}
+
+.container-fluid {
+    height:100vh; 
+    background-color: white;
 }
 
 .question {
 	background-color: white;
-	padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 40px 0px 60px 0px;
     margin: 10% 20px 20px 20px;
-    text-align: center;
+}
+
+.first {
+	height:100vh; 
+	background-color: pink;
+	padding: 10% 5% 15% 5%;
+}
+
+.first h2 {
+	color: white;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 30px;
+}
+
+.second {
+	background-color: white;
+}
+
+.second a {
+	color: black;
+}
+
+.second .row {
+	background-color: white;
+	padding: 5% 5% 8% 5%;
+}
+
+.second .row h2{
+	text-decoration: underline;
+}
+
+.start-description {
+	color: black;
+	font-size: 14px;
+	font-family: 'Droid Sans Mono', monospace;
+}
+
+
+.col-md-12 img {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px 20px 0px 20px;
 }
 
 .question a {
 	color: black;
 }
 
-h1 {
-	color: #D9534F;
-	font-size: 72px;
+.btn-lg {
+	border-radius:0;
+	border: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: 'Droid Sans Mono', monospace;
+}
+
+.btn-danger{
+	background-color: pink;
+	padding: 20px 40px 20px 40px;
+}
+
+.btn-danger:hover{
+	background-color: black;
+	color: white;
+}
+
+form {
 	margin-bottom: 40px;
+}
+
+form p {
+	font-family: 'Droid Sans Mono', monospace;
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+}
+
+h1 {
+	color: black;
+	font-size: 72px;
+	margin-bottom: 20px;
 	font-weight: inherit;
 	line-height: 90px;
 }
 
 h2 {
+	font-family: 'Droid Sans Mono', monospace;
 	color: black;
-	font-size: 42px;
+	font-size: 24px;
 	padding-top: 10px;
-    padding-bottom: 20px;
-}
-
-form {
-	margin-bottom: 20px;
-}
-
-img {
-	margin-top: 20px;
 }
