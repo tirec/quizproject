@@ -1,12 +1,11 @@
 from django.shortcuts import render
 def startpage(request):
-return render(request, "quiz/startpage.html")
+	return render(request, "quiz/startpage.html")
 def quiz(request):
-return render(request, "quiz/quiz.html")
+	return render(request, "quiz/quiz.html")
 def question(request):
-return render(request, "quiz/question.html")
+	return render(request, "quiz/question.html")
 def completed(request):
-return render(request, "quiz/completed.html")
-from django.shortcuts import render
+	return render(request, "quiz/completed.html")
 
 # Create your views here.
