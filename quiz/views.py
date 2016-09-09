@@ -1,7 +1,8 @@
+from quiz.models import Quiz
 from django.shortcuts import render
 def startpage(request):
 	context = {
-		"quizzes": quizzes,
+		"quizzes": Quiz.objects.all(),
 	}
 	return render(request, "quiz/startpage.html", context)
 def quiz(request, quiz_number):
@@ -27,22 +28,3 @@ def completed(request, quiz_number):
 		"quiz_number": quiz_number,
 	}
 	return render(request, "quiz/completed.html", context)
-
-quizzes = [
-	{
-		"quiz_number": 1,
-   		"name": "Det ultimata Disney-quizet",
-	   	"description": "Kan du dina disneyfilmer?"
-	},
-	{
-		"quiz_number": 2,
-   	   	"name": "Det här quizet ska du välja",
-	   	"description": "För det har jag lagt extra mycket tid på."
-	},
-	{
-		"quiz_number": 3,
-   	    	"name": "Gissa bilden",
-	    	"description": "Kan du se vad som döljer sig i bilderna?"	},
-]
-
-# Create your views here.
