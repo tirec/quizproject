@@ -20,7 +20,7 @@ body.completed {
 	background: linear-gradient(to bottom right, #9BF0FA, #FAE89B);
 	height:100vh; 
 	text-align: center;
-	padding-top: 10%;
+	padding-top: 5%;
 }
 
 a {
@@ -122,11 +122,21 @@ p {
 	color: white;
 }
 
-form {
-	margin-bottom: 40px;
+.btn-danger:active:focus {
+  background-color: black;
+ }
+
+.btn-danger:focus {
+  background-color: black;
 }
 
-form p {
+form {
+	margin-bottom: 40px;
+	display: inline-block;
+   	text-align:left;
+}
+
+form label {
 	font-family: 'Droid Sans Mono', monospace;
 	font-size: 18px;
 	font-weight: bold;
@@ -146,4 +156,8 @@ h2 {
 	color: black;
 	font-size: 24px;
 	padding-top: 10px;
+}
+
+h3 {
+	color: black;
 }

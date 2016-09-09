@@ -12,8 +12,8 @@
 	</head>
 	<body class="landingquiz">
 		<div class="container">
-				<h2>{{ quiz.name }} - {{ quiz.description }}</h2>
-				<h1>Vi vill se om du har vad som krävs för att vara en riktigt bitter AD</h1>
+				<h1>{{ quiz.name }}</h1>
+				<h2>{{ quiz.description }}</h2>
 				<a href="{% url "question_page" quiz_number 1 %}" type="button" class="btn btn-danger btn-lg">Starta</a>
 		</div>
 	</body>
