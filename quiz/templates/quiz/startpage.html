@@ -13,13 +13,13 @@
 	<body>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-8 first">
+				<div class="col-md-6 first">
 			      <h1>Oj wow. Kolla in mina super&shy;häftiga quiz!</h1>
 			      <h2>I en vecka har jag och 100 tjejer hängt i Barcelona och lärt oss en massa saker. Klicka runt här och se vad jag kan nu! PS. Allt detta har vi gjort i kalla lokaler medan solen utanför har lockat med sina 30 grader.</h2>
 			    </div>
 			    
 			    {% for quiz in quizzes %}
-			    	<div class="col-md-4 second">
+			    	<div class="col-md-6 second">
 			   			<div class="row">
 			   				<h2>{{ quiz.name }}</h2>
 			   				<p class="start-description">{{ quiz.description }}</p>

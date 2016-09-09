@@ -13,18 +13,18 @@
 	<body class="quiz">
 		<div class="container">
 			<div class="question">
-				<h1>- {{ question_number }} -<br>
-				{{ question }}</h1>				
-				<form action="question">
-				  <label><input type="radio" name="alternative" value="1" checked> {{ answer1 }}</label><br>
-				  <label><input type="radio" name="alternative" value="2"> {{ answer2 }}</label><br>
-				  <label><input type="radio" name="alternative" value="3"> {{ answer3 }}</label><br>
+				<p>{{ question_number }}</p>
+				<h1>{{ question }}</h1>				
+				<form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
+				{% csrf_token %}
+				  <label><input type="radio" name="answer" value="1" checked> {{ answer1 }}</label><br>
+				  <label><input type="radio" name="answer" value="2"> {{ answer2 }}</label><br>
+				  <label><input type="radio" name="answer" value="3"> {{ answer3 }}</label><br>
+				<button type="submit" class="btn btn-danger btn-lg">Nästa fråga</button>
 				</form>
-				<p><a href="{% url "completed_page" quiz_number %}" type="button" class="btn btn-danger btn-lg">Nästa fråga</a></p>
 			</div>
 		</div>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </html>
-
