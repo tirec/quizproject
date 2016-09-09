@@ -1,5 +1,6 @@
 from quiz.models import Quiz
 from django.shortcuts import render
+
 def startpage(request):
 	context = {
 		"quizzes": Quiz.objects.all(),
@@ -7,18 +8,22 @@ def startpage(request):
 	return render(request, "quiz/startpage.html", context)
 def quiz(request, quiz_number):
 	context = {
-		"quiz": quizzes[int(quiz_number) - 1],
+		"quiz": Quiz.objects.get(quiz_number=quiz_number),
 		"quiz_number": quiz_number,
 	}
 	return render(request, "quiz/quiz.html", context)
 def question(request, quiz_number, question_number):
+	quiz = Quiz.objects.get(quiz_number=quiz_number)
+	questions = quiz.questions.all()
+	question = questions[int(question_number) - 1]
 	context = {
 		"question_number": question_number,
-	    "question": "Hur många bultar har Ölandsbron?",
-		"answer1": "12",
-	   	"answer2": "66 400",
-	    "answer3": "7 428 954",
-	    "quiz_number": quiz_number,
+		"question": question.question,
+		"answer1": question.answer1,
+		"answer2": question.answer2,
+		"answer3": question.answer3,
+		"quiz": quiz,
+		"quiz_number": quiz_number,
 	}
 	return render(request, "quiz/question.html", context)
 def completed(request, quiz_number):
